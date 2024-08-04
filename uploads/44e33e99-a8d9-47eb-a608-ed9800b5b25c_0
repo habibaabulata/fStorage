@@ -1,0 +1,139 @@
+//Assignment 2
+#include <GL/freeglut.h>
+#include <ctime>
+bool rotateCubes = false;
+float rotationSpeed = 0.01f;
+GLfloat angle = 0.0f;
+
+void drawSmallRedWireCube() {
+    glColor4f(1.0f, 0.0f, 0.0f, 1.0f); // Red color
+    glutWireCube(0.3); // Small wireframe cube with side length of 0.2
+}
+
+void display() {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glLoadIdentity();
+
+    // Move the camera back so we can see the cube
+    gluLookAt(0.0, 0.0, 5.0, // eye position
+        0.0, 0.0, 0.0, // center position (look at)
+        0.0, 1.0, 0.0);// up direction
+
+    // Apply translation to move the cube to the center (if needed)
+    glTranslatef(0.0f, 0.0f, 0.0f);
+
+    // Apply scaling to make the cube larger
+    glScalef(2.0f, 2.0f, 2.0f); // Scale the cube by a factor of 2 in all dimensions
+
+    // Draw the wireframe cube with a side length of 1.0
+    glutWireCube(1.0);
+    glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+
+    // Draw wireframe small cubes at each corner // Red color
+    glPushMatrix();
+    glTranslatef(0.5f, 0.0f, 0.0f);
+    if (rotateCubes) glRotatef(angle, 0.0f, 0.0f, 0.1f);
+    drawSmallRedWireCube();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-0.14f, 0.5f, 0.0f); // Move to next corner
+    if (rotateCubes) glRotatef(angle, 0.0f, 0.0f, 0.1f);
+    drawSmallRedWireCube();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0.16f, 0.5f, 0.0f);// Move to next corner
+    if (rotateCubes) glRotatef(angle, 0.0f, 0.0f, 0.1f);
+    drawSmallRedWireCube();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-0.5f, 0.0f, 0.0f); // Move to next corner
+    if (rotateCubes) glRotatef(angle, 0.0f, 0.0f, 0.1f);
+    drawSmallRedWireCube();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-0.14f, -0.5f, 0.0f); // Move to next corner
+    if (rotateCubes) glRotatef(angle, 0.0f, 0.0f, 0.1f);
+    drawSmallRedWireCube();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0.16f, -0.5f, 0.0f); // Move to next corner
+    if (rotateCubes) glRotatef(angle, 0.0f, 0.0f, 0.1f);
+    drawSmallRedWireCube();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0.6f, -0.5f, -0.6f); // Move to next corner, lower center right
+    if (rotateCubes) glRotatef(angle, 0.0f, 0.0f, 0.1f);
+    drawSmallRedWireCube();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-0.6f, -0.5f, -0.6f); // Move to next corner, lower center left
+    if (rotateCubes) glRotatef(angle, 0.0f, 0.0f, 0.1f);
+    drawSmallRedWireCube();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0.6f, 0.5f, -0.6f); // Move to next corner, upper center right
+    if (rotateCubes) glRotatef(angle, 0.0f, 0.0f, 0.1f);
+    drawSmallRedWireCube();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-0.6f, 0.5f, -0.6f); // Move to next corner, upper center left
+    if (rotateCubes) glRotatef(angle, 0.0f, 0.0f, 0.1f);
+    drawSmallRedWireCube();
+    glPopMatrix();
+    
+  
+
+    glutSwapBuffers();
+}
+
+void init() {
+    glEnable(GL_DEPTH_TEST);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective(45.0, 1.0, 1.0, 100.0);
+    glMatrixMode(GL_MODELVIEW);
+}
+
+void keyboard(unsigned char key, int x, int y) {
+    switch (key) {
+    case ' ': // Space bar
+        rotateCubes = !rotateCubes; // Toggle rotation state
+        break;
+    }
+    glutPostRedisplay(); // Mark the window as needing to be redisplayed
+}
+
+void idle() {
+    if (rotateCubes) {
+        angle += rotationSpeed; // Increase the angle
+        if (angle > 360.0f) {
+            angle -= 360.0f; // Keep the angle within 0-360 degrees
+        }
+        glutPostRedisplay(); // Request a redraw
+    }
+}
+
+int main(int argc, char** argv) {
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+    glutInitWindowSize(800, 600);
+    glutCreateWindow("Scaled Wireframe Cube with Small Red Wireframe Cubes at Corners");
+
+    init();
+
+    glutDisplayFunc(display);
+    glutKeyboardFunc(keyboard);
+    glutIdleFunc(idle);
+
+    glutMainLoop();
+    return 0;
+}

@@ -1,0 +1,110 @@
+=============== Jul 28, 2024 (EEST) ===============
+05:34:09.850755 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+05:34:09.853419 db@open opening
+05:34:09.854924 version@stat F·[] S·0B[] Sc·[]
+05:34:09.856724 db@janitor F·2 G·0
+05:34:09.856724 db@open done T·3.3054ms
+05:34:09.857227 db@close closing
+05:34:09.857389 db@close done T·161.9µs
+=============== Jul 28, 2024 (EEST) ===============
+05:50:28.753194 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+05:50:28.754789 version@stat F·[] S·0B[] Sc·[]
+05:50:28.759929 db@open opening
+05:50:28.759929 journal@recovery F·1
+05:50:28.761493 journal@recovery recovering @1
+05:50:28.762561 version@stat F·[] S·0B[] Sc·[]
+05:50:28.769273 db@janitor F·2 G·0
+05:50:28.769273 db@open done T·9.3442ms
+05:50:28.769836 db@close closing
+05:50:28.770362 db@close done T·525.6µs
+=============== Jul 28, 2024 (EEST) ===============
+14:27:57.155988 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:27:57.165564 version@stat F·[] S·0B[] Sc·[]
+14:27:57.165564 db@open opening
+14:27:57.165681 journal@recovery F·1
+14:27:57.166379 journal@recovery recovering @2
+14:27:57.167739 version@stat F·[] S·0B[] Sc·[]
+14:27:57.174707 db@janitor F·2 G·0
+14:27:57.174707 db@open done T·9.1427ms
+14:27:57.176075 db@close closing
+14:27:57.176582 db@close done T·507.6µs
+=============== Jul 28, 2024 (EEST) ===============
+14:27:57.177123 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:27:57.184844 version@stat F·[] S·0B[] Sc·[]
+14:27:57.184844 db@open opening
+14:27:57.184844 journal@recovery F·1
+14:27:57.184844 journal@recovery recovering @4
+14:27:57.190124 memdb@flush created L0@6 N·7 S·401B "tes..k_0,v1":"tes..ata,v7"
+14:27:57.194070 version@stat F·[1] S·401B[401B] Sc·[0.25]
+14:27:57.197539 db@janitor F·3 G·0
+14:27:57.197539 db@open done T·12.6955ms
+14:27:57.197539 db@close closing
+14:27:57.198546 db@close done T·1.007ms
+=============== Jul 28, 2024 (EEST) ===============
+14:28:59.212342 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:28:59.214336 version@stat F·[1] S·401B[401B] Sc·[0.25]
+14:28:59.214336 db@open opening
+14:28:59.214945 journal@recovery F·1
+14:28:59.218829 journal@recovery recovering @7
+14:28:59.220098 version@stat F·[1] S·401B[401B] Sc·[0.25]
+14:28:59.231990 db@janitor F·3 G·0
+14:28:59.232279 db@open done T·17.9425ms
+=============== Jul 28, 2024 (EEST) ===============
+14:29:11.037136 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:29:11.039861 version@stat F·[1] S·401B[401B] Sc·[0.25]
+14:29:11.040371 db@open opening
+14:29:11.040794 journal@recovery F·1
+14:29:11.040794 journal@recovery recovering @9
+14:29:11.051959 memdb@flush created L0@11 N·2 S·270B "tes..k_0,v9":"tes..ata,v10"
+14:29:11.053481 version@stat F·[2] S·671B[671B] Sc·[0.50]
+14:29:11.063197 db@janitor F·4 G·0
+14:29:11.063197 db@open done T·22.8253ms
+14:29:38.326400 db@close closing
+14:29:38.327422 db@close done T·1.0224ms
+=============== Jul 28, 2024 (EEST) ===============
+14:29:38.329415 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:29:38.340510 version@stat F·[2] S·671B[671B] Sc·[0.50]
+14:29:38.340510 db@open opening
+14:29:38.340510 journal@recovery F·1
+14:29:38.341691 journal@recovery recovering @12
+14:29:38.350737 memdb@flush created L0@14 N·7 S·413B "tes..k_0,v12":"tes..ata,v18"
+14:29:38.352658 version@stat F·[3] S·1KiB[1KiB] Sc·[0.75]
+14:29:38.358241 db@janitor F·5 G·0
+14:29:38.358241 db@open done T·17.7316ms
+14:29:38.358748 db@close closing
+14:29:38.358748 db@close done T·0s
+=============== Jul 28, 2024 (EEST) ===============
+14:29:53.618072 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:29:53.621816 version@stat F·[3] S·1KiB[1KiB] Sc·[0.75]
+14:29:53.621816 db@open opening
+14:29:53.621816 journal@recovery F·1
+14:29:53.623198 journal@recovery recovering @15
+14:29:53.626327 version@stat F·[3] S·1KiB[1KiB] Sc·[0.75]
+14:29:53.638906 db@janitor F·5 G·0
+14:29:53.638906 db@open done T·17.0899ms
+=============== Jul 28, 2024 (EEST) ===============
+14:30:51.183219 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:30:51.184936 version@stat F·[3] S·1KiB[1KiB] Sc·[0.75]
+14:30:51.185447 db@open opening
+14:30:51.185447 journal@recovery F·1
+14:30:51.187667 journal@recovery recovering @17
+14:30:51.190561 memdb@flush created L0@19 N·4 S·324B "tes..k_0,v20":"tes..ata,v23"
+14:30:51.191019 version@stat F·[4] S·1KiB[1KiB] Sc·[1.00]
+14:30:51.196992 db@janitor F·6 G·0
+14:30:51.197496 db@open done T·12.0493ms
+14:30:51.198279 table@compaction L0·4 -> L1·0 S·1KiB Q·28
+14:30:51.198824 db@close closing
+14:30:51.202266 db@close done T·3.4417ms
+=============== Jul 28, 2024 (EEST) ===============
+14:31:46.351636 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:31:46.353297 version@stat F·[4] S·1KiB[1KiB] Sc·[1.00]
+14:31:46.353297 db@open opening
+14:31:46.353827 journal@recovery F·1
+14:31:46.355842 journal@recovery recovering @20
+14:31:46.358625 memdb@flush created L0@22 N·7 S·401B "tes..k_0,v25":"tes..ata,v31"
+14:31:46.359301 version@stat F·[5] S·1KiB[1KiB] Sc·[1.25]
+14:31:46.364722 db@janitor F·7 G·0
+14:31:46.365369 db@open done T·12.072ms
+14:31:46.365369 table@compaction L0·5 -> L1·0 S·1KiB Q·32
+14:31:46.367661 db@close closing
+14:31:46.371200 db@close done T·3.5397ms
